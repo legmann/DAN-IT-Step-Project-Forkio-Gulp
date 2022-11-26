@@ -98,7 +98,7 @@ function scriptsDev() {
 
 function styles() {
   return gulp
-    .src(`${path.src.scss}/**/*.scss`)
+    .src(`${path.src.scss}/import.scss`)
     .pipe(
       plumber({
         errorHandler: notify.onError((error) => ({
@@ -112,7 +112,6 @@ function styles() {
     .pipe(cleanCSS({
       level: 2
     }))
-    .pipe(concat('styles.css'))
     .pipe(rename({
       basename: "styles",
       suffix: ".min",
