@@ -30,6 +30,11 @@
     color: #323232;
     margin: 0 0 15px 0;
   }
+  &__link{
+    display: flex;
+    text-decoration: none;
+    color: black;
+  }
   &__button_list{
     list-style: none;
     display: flex;
