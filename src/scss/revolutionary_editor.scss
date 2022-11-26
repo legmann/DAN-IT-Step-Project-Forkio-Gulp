@@ -1,4 +1,4 @@
-.container{
+.container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -7,9 +7,10 @@
   text-align: center;
 }
 
-.revolution_editor{
+.revolution_editor {
   background: #FFFFFF;
-  &__header{
+
+  &__header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -20,7 +21,8 @@
     margin: 70px 0 35px 0;
     text-align: center;
   }
-  &__paragraph{
+
+  &__paragraph {
     font-family: 'Lato', sans-serif;
     text-align: center;
     font-style: normal;
@@ -30,12 +32,14 @@
     color: #323232;
     margin: 0 0 15px 0;
   }
-  &__link{
+
+  &__link {
     display: flex;
     text-decoration: none;
     color: black;
   }
-  &__button_list{
+
+  &__button_list {
     list-style: none;
     display: flex;
     align-items: center;
@@ -45,13 +49,15 @@
     justify-content: center;
     gap: 10px;
   }
-  &__list_el{
+
+  &__list_el {
     display: flex;
     border: 1px solid #c9d1d9;
     border-radius: 5px;
 
   }
-  &__svg_wrapper{
+
+  &__svg_wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +65,8 @@
     border-right: 1px solid #c9d1d9;
     background: linear-gradient(360deg, #dee1e1 20%, #f4f4f4 50%)
   }
-  &__wrapper_header{
+
+  &__wrapper_header {
     font-family: 'Montserrat', sans-serif;
     margin: 0 0 0 5px;
     font-weight: 700;
@@ -67,13 +74,15 @@
     font-size: 15px;
     line-height: 15px;
   }
-  &__count_wrapper{
+
+  &__count_wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 5px 8px;
   }
-  &__count{
+
+  &__count {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     font-weight: 700;
