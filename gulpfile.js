@@ -1,12 +1,10 @@
 "use strict"
-
-const { series, parallel } = require('gulp');
+const { series } = require('gulp');
 const browsersync = require("browser-sync").create();
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const del = require('del');
 const sourcemaps = require('gulp-sourcemaps');
-const htmlmin = require('gulp-htmlmin');
 const size = require('gulp-size');
 const jsmin = require('gulp-uglify');
 const babel = require('gulp-babel');
@@ -39,17 +37,6 @@ const path = {
 
   },
 };
-
-function html() {
-  return gulp.src(`${path.src.html}/**/*.html`)
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(size({
-      showFiles: true
-    }))
-    .pipe(concat('index.html'))
-    .pipe(gulp.dest(path.dist.html))
-    .pipe(browsersync.stream())
-}
 
 
 function scripts() {
@@ -139,7 +126,6 @@ function styles() {
       showFiles: true
     }))
     .pipe(gulp.dest(path.dist.css))
-    .pipe(browsersync.stream())
 }
 
 function stylesDev() {
@@ -170,7 +156,6 @@ function stylesDev() {
       showFiles: true
     }))
     .pipe(gulp.dest(path.dist.css))
-    .pipe(browsersync.stream())
 }
 
 
@@ -189,11 +174,8 @@ function images() {
 }
 
 
-function clean() {
-  return del(['dist/*', '!dist/img']);
-}
 
-function fclean() {
+function clean()  {
   return del(['dist/*']);
 }
 
@@ -201,29 +183,19 @@ function fclean() {
 function watch() {
   browsersync.init({
     server: {
-      baseDir: "./"
+      baseFile: "./index.html"
     }
   })
 
-  gulp.watch(path.src.html).on('change', browsersync.reload)
-  gulp.watch(path.src.scss, styles)
-  gulp.watch(path.src.html, html)
-  gulp.watch(path.src.js, scripts)
-  gulp.watch(path.src.img, images)
+  gulp.watch(path.src.scss, styles).on('change', browsersync.reload)
+  gulp.watch(path.src.js, scripts).on('change', browsersync.reload)
+  gulp.watch(path.src.img, images).on('change', browsersync.reload)
 }
 
-const build = series(clean, html, styles, scripts, images, watch);
-const dev = series(clean, stylesDev, scriptsDev, watch);
+const build = series(clean, styles, scripts, images,stylesDev, scriptsDev);
+const dev = series(build, watch);
 
-exports.scriptsDev = scriptsDev;
-exports.stylesDev = stylesDev;
-exports.scripts = scripts;
-exports.styles = styles;
-exports.html = html;
-exports.images = images;
-exports.clean = clean;
-exports.fclean = fclean;
-exports.watch = watch;
-exports.dev = dev;
-exports.build = build;
-exports.default = build;
+exports.build = build
+exports.dev = dev
+
+
