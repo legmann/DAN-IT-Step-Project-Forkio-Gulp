@@ -38,6 +38,16 @@ const path = {
     },
 };
 
+function html() {
+    return gulp.src(`${path.src.html}/**/*.html`)
+        .pipe(size({
+            showFiles: true
+        }))
+        .pipe(concat('index.html'))
+        .pipe(gulp.dest(path.dist.html))
+        .pipe(browsersync.stream())
+}
+
 
 function scripts() {
     return gulp
@@ -173,7 +183,16 @@ function images() {
 }
 
 
+<<<<<<< HEAD
 function clean() {
+=======
+
+function clean() {
+    return del(['dist/*', '!dist/img']);
+}
+
+function fclean() {
+>>>>>>> student_1
     return del(['dist/*']);
 }
 
@@ -185,12 +204,22 @@ function watch() {
         }
     })
 
+<<<<<<< HEAD
     gulp.watch(path.src.scss, styles).on('change', browsersync.reload)
     gulp.watch(path.src.js, scripts).on('change', browsersync.reload)
     gulp.watch(path.src.img, images).on('change', browsersync.reload)
 }
 
 const build = series(clean, styles, scripts, images, stylesDev, scriptsDev);
+=======
+  gulp.watch(path.src.html, html).on('change', browsersync.reload)
+  gulp.watch(path.src.scss, styles).on('change', browsersync.reload)
+  gulp.watch(path.src.js, scripts).on('change', browsersync.reload)
+  gulp.watch(path.src.img, images).on('change', browsersync.reload)
+}
+
+const build = series(clean, html, styles, scripts, images,stylesDev, scriptsDev);
+>>>>>>> student_1
 const dev = series(build, watch);
 
 exports.build = build
