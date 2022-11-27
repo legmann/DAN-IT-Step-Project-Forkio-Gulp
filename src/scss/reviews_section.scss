@@ -1,4 +1,5 @@
 .reviews {
+  margin-top: -10px;
   background: url("../dist/img/reviews_section_img/reviews_section_background.png");
   background-size: cover;
 
@@ -16,7 +17,7 @@
     padding: 0;
     display: grid;
     column-gap: 90px;
-    row-gap: 120px;
+    row-gap: 110px;
     place-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
