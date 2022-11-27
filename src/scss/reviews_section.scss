@@ -1,0 +1,80 @@
+.reviews {
+  margin-top: -10px;
+  background: url("../dist/img/reviews_section_img/reviews_section_background.png");
+  background-size: cover;
+
+  &__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    overflow: hidden;
+  }
+
+  &__list {
+    margin-top: 82px;
+    margin-bottom: 115px;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    column-gap: 90px;
+    row-gap: 110px;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    &_el {
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+      place-items: center;
+      align-content: space-between;
+      height: 170px;
+    }
+
+    &_paragraph {
+      font-family: 'Lato', sans-serif;
+      color: #FFFFFF;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__text_wrapper {
+    padding-bottom: 40px;
+    max-width: 880px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__text {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #A291A5;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      width: 780px;
+      height: 2px;
+      background-color: #645766;
+      top: 72%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.section__header {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 50px;
+  color: #FFFFFF;
+  padding-top: 110px;
+}
