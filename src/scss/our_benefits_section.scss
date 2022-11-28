@@ -2,6 +2,8 @@
   background: #f4f4f4;
 
   &__container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -27,6 +29,7 @@
     line-height: 50px;
     color: #8d81ac;
     margin-bottom: 20px;
+    margin-left: 20px;
   }
 
   &__list {
@@ -35,7 +38,7 @@
     max-width: 540px;
     list-style: none;
     padding: 0;
-    margin-left: 90px;
+    text-align: start;
 
     &_el {
       display: grid;
@@ -94,6 +97,9 @@
         align-items: center;
         place-items: center;
       }
+      &_header {
+        line-height: 16px;
+      }
     }
 
     &__header {
@@ -122,5 +128,66 @@
     }
   }
 
+}
+
+@media screen and (min-width:320px) and (max-width: 480px) {
+  .our_benefits {
+    background: #FFFFFF;
+
+    &__list {
+      max-width: 960px;
+      row-gap: 60px;
+      padding-right: 10px;
+      padding-left: 10px;
+
+      &_el {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        align-items: center;
+        place-items: center;
+      }
+    }
+
+    &__header {
+      padding: 0 10px 30px 10px;
+      margin: 0;
+      text-align: center;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    &__list {
+      margin-left: 0;
+      margin-bottom: 70px;
+    }
+
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top:0;
+      grid-template-areas:
+    "b b b b b b b b"
+    "a a a a a a a a"
+    "a a a a a a a a"
+    "a a a a a a a a"
+    ". . . . c c c c"
+    ". . . . c c c c"
+    ". . . . c c c c";
+    }
+    &__list {
+      text-align: center;
+      row-gap: 10px;
+      &_el {
+        row-gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        place-items: center;
+      }
+    }
+  }
 }
 
