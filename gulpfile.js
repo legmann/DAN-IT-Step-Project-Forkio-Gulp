@@ -205,7 +205,7 @@ function watch() {
     gulp.watch(path.src.img, images).on('change', browsersync.reload)
 }
 
-const build = series(clean, html, styles, scripts, images, styles, scriptsDev);
+const build = series(clean, html, styles, scripts, images, scriptsDev);
 const dev = series(build, watch);
 
 exports.build = build

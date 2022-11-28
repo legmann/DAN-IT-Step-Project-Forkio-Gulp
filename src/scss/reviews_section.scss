@@ -16,20 +16,20 @@
   // background-position: center;
   // background-attachment: local;
   // width: 100%;
-  // height: 984px;
+  // height: 1984px;
   // margin: auto;
   //
 
-  margin: auto;
-  max-width: 1200px;
+  // margin: auto;
+  // max-width: 1200px;
   // height: 910px;
   // height: 100vw;
   // background-size: cover;
   // justify-content: space-between;
   background: url('../dist/img/reviews_section_img/reviews_section_background.png');
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
   background-position: center;
-  background-attachment: local;
+  // background-attachment: local;
   background-size: cover;
 
   &__container {
@@ -83,7 +83,7 @@
 
   &__text_wrapper {
     padding-top: 118px;
-    padding-bottom: 25px;
+    padding-bottom: 30px;
     max-width: 880px;
     margin: 0 auto;
     position: relative;
@@ -103,7 +103,7 @@
       width: 100%;
       height: 2px;
       background-color: #645766;
-      bottom: 8px;
+      bottom: 11px;
       left: 50%;
       margin-right: -50%;
       transform: translate(-50%, -50%);
