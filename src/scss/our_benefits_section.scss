@@ -2,15 +2,20 @@
   background: #f4f4f4;
 
   &__container {
+    padding-top: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 95px;
     grid-template-areas:
       'a a a a b b b b'
       'a a a a c c c c'
       'a a a a c c c c'
       'a a a a c c c c'
       '. . . . c c c c';
+  }
+  &__code_img{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
   }
 
   &__header {
@@ -71,3 +76,43 @@
 .item_3 {
   grid-area: c;
 }
+
+
+@media screen and (min-width:481px) and (max-width: 992px) {
+  .our_benefits{
+    background: #FFFFFF;
+    &__list{
+      max-width: 960px;
+      row-gap: 60px;
+      &_el {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        align-items: center;
+        place-items: center;
+      }
+    }
+    &__header{
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+    &__list{
+      margin-left: 0;
+      margin-bottom: 70px;
+    }
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 95px;
+      grid-template-areas:
+    "b b b b b b b b"
+    "a a a a a a a a"
+    "a a a a a a a a"
+    "a a a a a a a a"
+    ". . . . c c c c"
+    ". . . . c c c c"
+    ". . . . c c c c";
+    }
+  }
+
+}
+
