@@ -1,5 +1,5 @@
 .header-container {
-  // max-width: 1200px;
+  // max-width: 1000%;
   // margin: auto;
   // margin-top: 0;
   padding-left: 10px;
@@ -12,13 +12,15 @@
   // display: flex;
   // flex: 1 1 auto;
   margin: auto;
-  max-width: 1200px;
+  // max-width: 1200px;
   height: 800px;
-  justify-content: space-between;
+  // justify-content: space-between;
   background-image: url('/dist/img/header/header-bg.png');
+  background-color: #010005;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: local;
+  // background-attachment: local;
+  // background-size: cover;
 
   & a {
     text-decoration: none;
