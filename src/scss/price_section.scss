@@ -24,8 +24,8 @@
     place-items: center;
     &_el {
       background-color: rgba(255, 255, 255, 0.11);
-      width: 260px;
       max-width: 260px;
+      width: 260px;
       height: 515px;
 
       &-color {
@@ -168,8 +168,29 @@
       line-height: 44px;
     }
     &__list{
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      justify-content: center;
+      grid-template-rows: 560px 560px;
+      grid-template-columns: 270px 270px;
+      gap:25px;
+    }
+  }
+}
+
+@media screen and (min-width:320px) and (max-width: 480px) {
+  .price {
+    &__header {
+      font-size: 28px;
+      line-height: 42px;
+      padding-top: 30px;
+    padding-bottom: 30px;
+    }
+    &__list{
+      column-gap: 20px;
+      justify-content: center;
+      grid-template-columns: 270px;
+      gap:25px;
+      padding-bottom: 10px;
     }
   }
 }
