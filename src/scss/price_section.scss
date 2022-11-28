@@ -1,7 +1,7 @@
 .price {
   margin-top: -13px;
   overflow: hidden;
-  background-image: url("../dist/img/price_section_img/price_section_background.png");
+  background-image: url("../dist/img/price_section/price_section_background.png");
 
   &__header {
     font-family: 'Montserrat', sans-serif;
@@ -16,12 +16,13 @@
 
   &__list {
     padding-bottom: 100px;
-    gap:10px;
+    gap: 10px;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     text-align: center;
     place-items: center;
+
     &_el {
       background-color: rgba(255, 255, 255, 0.11);
       max-width: 260px;
@@ -177,19 +178,19 @@
   }
 }
 
-@media screen and (min-width:320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .price {
     &__header {
       font-size: 28px;
       line-height: 42px;
       padding-top: 30px;
-    padding-bottom: 30px;
+      padding-bottom: 30px;
     }
     &__list{
       column-gap: 20px;
       justify-content: center;
       grid-template-columns: 270px;
-      gap:25px;
+      gap: 25px;
       padding-bottom: 10px;
     }
   }

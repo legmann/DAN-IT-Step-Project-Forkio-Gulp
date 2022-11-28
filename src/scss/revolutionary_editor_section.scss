@@ -11,6 +11,7 @@
   background: #FFFFFF;
   margin-top: 70px;
   width: 100%;
+
  &__container{
    display: flex;
    flex-direction: column;
@@ -26,7 +27,7 @@
     line-height: 54px;
     text-transform: uppercase;
     color: #635C73;
-    padding: 70px 0 0 0 ;
+    padding: 70px 0 0 0;
     margin: 0 0 35px 0;
     text-align: center;
   }
@@ -39,7 +40,7 @@
     font-size: 21px;
     line-height: 32px;
     color: #323232;
-    margin: 0 0 0 0;
+    margin: 0;
   }
 
   &__link {
@@ -68,7 +69,7 @@
     align-items: center;
     padding: 5px 12px;
     border-right: 1px solid #c9d1d9;
-    background: linear-gradient(360deg, #dee1e1 20%, #f4f4f4 50%)
+    background: linear-gradient(360deg, #dee1e1 20%, #f4f4f4 50%);
   }
 
   &__wrapper_header {

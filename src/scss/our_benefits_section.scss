@@ -118,19 +118,19 @@
       grid-template-columns: 1fr 1fr;
       padding-top: 95px;
       grid-template-areas:
-    "b b b b b b b b"
-    "a a a a a a a a"
-    "a a a a a a a a"
-    "a a a a a a a a"
-    ". . . . c c c c"
-    ". . . . c c c c"
-    ". . . . c c c c";
+        "b b b b b b b b"
+        "a a a a a a a a"
+        "a a a a a a a a"
+        "a a a a a a a a"
+        ". . . . c c c c"
+        ". . . . c c c c"
+        ". . . . c c c c";
     }
   }
 
 }
 
-@media screen and (min-width:320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .our_benefits {
     background: #FFFFFF;
 
@@ -166,19 +166,21 @@
     &__container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      padding-top:0;
+      padding-top: 0;
       grid-template-areas:
-    "b b b b b b b b"
-    "a a a a a a a a"
-    "a a a a a a a a"
-    "a a a a a a a a"
-    ". . . . c c c c"
-    ". . . . c c c c"
-    ". . . . c c c c";
+        "b b b b b b b b"
+        "a a a a a a a a"
+        "a a a a a a a a"
+        "a a a a a a a a"
+        ". . . . c c c c"
+        ". . . . c c c c"
+        ". . . . c c c c";
     }
+
     &__list {
       text-align: center;
       row-gap: 10px;
+
       &_el {
         row-gap: 10px;
         display: grid;
