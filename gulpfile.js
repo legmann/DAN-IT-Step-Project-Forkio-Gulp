@@ -108,7 +108,7 @@ function scriptsDev() {
 
 function styles() {
     return gulp
-        .src(`${path.src.scss}/import.scss`)
+        .src(`${path.src.scss}/style.scss`)
         .pipe(
             plumber({
                 errorHandler: notify.onError((error) => ({

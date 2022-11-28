@@ -1,7 +1,7 @@
 .price {
   margin-top: -13px;
   overflow: hidden;
-  background-image: url("../dist/img/price_section/price_section_background.png");
+  background-image: url("../dist/img/price-section/price-section-background.png");
 
   &__header {
     font-family: 'Montserrat', sans-serif;
@@ -168,12 +168,13 @@
       font-size: 42px;
       line-height: 44px;
     }
-    &__list{
+
+    &__list {
       column-gap: 20px;
       justify-content: center;
       grid-template-rows: 560px 560px;
       grid-template-columns: 270px 270px;
-      gap:25px;
+      gap: 25px;
     }
   }
 }
@@ -186,7 +187,8 @@
       padding-top: 30px;
       padding-bottom: 30px;
     }
-    &__list{
+
+    &__list {
       column-gap: 20px;
       justify-content: center;
       grid-template-columns: 270px;
