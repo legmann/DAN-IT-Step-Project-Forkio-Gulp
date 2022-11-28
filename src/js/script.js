@@ -11,7 +11,7 @@ document.addEventListener('click', (e) => {
     buttonImage.setAttribute("src", "./dist/img/header/menu-open-button.png");
   } else {
     menu.style.display = 'block';
-    buttonImage.setAttribute("src", "./dist/img/header/menu-open-button.png");
+    buttonImage.setAttribute("src", "./dist/img/header/menu-close-button.png");
   }
 })
 
@@ -39,7 +39,7 @@ function resized() {
     myHeight = document.body.clientHeight;
   }
 
-  if (myWidth <= 768) {
+  if (myWidth <= 480) {
     dislpay = "none";
   }
   menu.style.display = dislpay;
