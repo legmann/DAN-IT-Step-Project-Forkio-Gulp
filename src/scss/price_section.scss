@@ -4,8 +4,14 @@
   background-image: url("../dist/img/price_section_img/price_section_background.png");
 
   &__header {
+    font-family: 'Montserrat', sans-serif;
     padding-top: 85px;
     padding-bottom: 60px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+    color: #FFFFFF;
   }
 
   &__list {
@@ -150,4 +156,6 @@
     text-transform: uppercase;
   }
 }
+
+
 
