@@ -1,5 +1,5 @@
 "use strict"
-const {series} = require('gulp');
+const { series } = require('gulp');
 const browsersync = require("browser-sync").create();
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
@@ -173,9 +173,9 @@ function images() {
         .src(`${path.src.img}/**/*.{png,jpg,jpeg,gif,svg}`)
         .pipe(newer(path.dist.img))
         .pipe(imagesmin([
-            imagesmin.gifsicle({interlaced: true}),
-            imagesmin.mozjpeg({quality: 75, progressive: true}),
-            imagesmin.optipng({optimizationLevel: 5})]))
+            imagesmin.gifsicle({ interlaced: true }),
+            imagesmin.mozjpeg({ quality: 75, progressive: true }),
+            imagesmin.optipng({ optimizationLevel: 5 })]))
         .pipe(size({
             showFiles: true
         }))
@@ -183,16 +183,11 @@ function images() {
 }
 
 
-<<<<<<< HEAD
-function clean() {
-=======
-
 function clean() {
     return del(['dist/*', '!dist/img']);
 }
 
 function fclean() {
->>>>>>> student_1
     return del(['dist/*']);
 }
 
@@ -204,22 +199,13 @@ function watch() {
         }
     })
 
-<<<<<<< HEAD
+    gulp.watch(path.src.html, html).on('change', browsersync.reload)
     gulp.watch(path.src.scss, styles).on('change', browsersync.reload)
     gulp.watch(path.src.js, scripts).on('change', browsersync.reload)
     gulp.watch(path.src.img, images).on('change', browsersync.reload)
 }
 
-const build = series(clean, styles, scripts, images, stylesDev, scriptsDev);
-=======
-  gulp.watch(path.src.html, html).on('change', browsersync.reload)
-  gulp.watch(path.src.scss, styles).on('change', browsersync.reload)
-  gulp.watch(path.src.js, scripts).on('change', browsersync.reload)
-  gulp.watch(path.src.img, images).on('change', browsersync.reload)
-}
-
-const build = series(clean, html, styles, scripts, images,stylesDev, scriptsDev);
->>>>>>> student_1
+const build = series(clean, html, styles, scripts, images, styles, scriptsDev);
 const dev = series(build, watch);
 
 exports.build = build

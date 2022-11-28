@@ -1,16 +1,16 @@
 .our_benefits {
-  background: #F4F4F4;
+  background: #f4f4f4;
 
   &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 95px;
     grid-template-areas:
-    "a a a a b b b b"
-    "a a a a c c c c"
-    "a a a a c c c c"
-    "a a a a c c c c"
-    ". . . . c c c c";
+      'a a a a b b b b'
+      'a a a a c c c c'
+      'a a a a c c c c'
+      'a a a a c c c c'
+      '. . . . c c c c';
   }
 
   &__header {
@@ -19,7 +19,7 @@
     font-weight: 700;
     font-size: 48px;
     line-height: 50px;
-    color: #8D81AC;
+    color: #8d81ac;
     margin-left: 23px;
     margin-bottom: 20px;
   }
@@ -54,7 +54,7 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 21px;
-      color: #848E97;
+      color: #848e97;
       font-family: 'Montserrat', sans-serif;
     }
   }
@@ -71,4 +71,3 @@
 .item_3 {
   grid-area: c;
 }
-
