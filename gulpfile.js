@@ -187,10 +187,6 @@ function clean() {
     return del(['dist/*', '!dist/img']);
 }
 
-function fclean() {
-    return del(['dist/*']);
-}
-
 
 function watch() {
     browsersync.init({
@@ -205,7 +201,7 @@ function watch() {
     gulp.watch(path.src.img, images).on('change', browsersync.reload)
 }
 
-const build = series(clean, html, styles, scripts, images, scriptsDev);
+const build = series(clean, html, styles, scripts, images);
 const dev = series(build, watch);
 
 exports.build = build

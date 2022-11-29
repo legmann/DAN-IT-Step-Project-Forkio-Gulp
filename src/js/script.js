@@ -2,26 +2,17 @@ const menu = document.getElementById('menu');
 const button = document.querySelector(".menu-button");
 const buttonImage = document.getElementById('btn-img');
 
-
-document.addEventListener('click', (e) => {
-  const withinBoundaries = e.composedPath().includes('menu');
-
-  if (!withinBoundaries && menu.style.display === 'block') {
+button.addEventListener('click', (e) => {
+  if (menu.style.display === 'block') {
     menu.style.display = 'none';
     buttonImage.setAttribute("src", "./dist/img/header/menu-open-button.png");
   } else {
     menu.style.display = 'block';
-    buttonImage.setAttribute("src", "./dist/img/header/menu-open-button.png");
-  }
-})
-
-
-document.addEventListener('keydown', function (e) {
-  if (e.keyCode == 27) {
-    menu.style.display = 'none';
+    buttonImage.setAttribute("src", "./dist/img/header/menu-close-button.png");
   }
 });
 
+// Resized window function
 
 function resized() {
   let myWidth = 0,
@@ -39,8 +30,16 @@ function resized() {
     myHeight = document.body.clientHeight;
   }
 
-  if (myWidth <= 768) {
+  if (myWidth <= 480) {
     dislpay = "none";
+
+    // document.addEventListener('click', (e) => {
+    //   if (e.target !== buttonImage) {
+    //     menu.style.display = 'none';
+    //     buttonImage.setAttribute("src", "./dist/img/header/menu-open-button.png");
+    //   }
+    // });
+
   }
   menu.style.display = dislpay;
 }
