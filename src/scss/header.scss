@@ -137,8 +137,10 @@
   }
 }
 
-#menu-mobile {
-  display: none;
+.menu-mobile {
+  margin: 0 auto;
+  height: 0;
+  width: 0;
 }
 
 .menu {
@@ -147,7 +149,6 @@
   padding-left: 15px;
   padding-right: 48px;
   flex-shrink: 0;
-
   gap: 0;
 
   &__list {
