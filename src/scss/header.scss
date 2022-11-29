@@ -108,8 +108,11 @@
   }
 }
 
-#menu-mobile {
-  display: none;
+.menu-mobile {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  transform: translateX(0);
 }
 
 .menu {
@@ -119,7 +122,6 @@
   margin-left: auto;
   padding-left: 15px;
   padding-right: 48px;
-  flex-shrink: 0;
 
   gap: 0;
 
@@ -244,6 +246,18 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+  .menu-button {
+    position: relative;
+    margin-right: 15px;
+  }
+  .menu-mobile {
+    text-align: left;
+    position: absolute;
+    top: 108px;
+    right: 0;
+    left: 90%;
+  }
+
   .header-container {
     @include padding-LR(0, 0);
   }
@@ -301,6 +315,18 @@
     left: 0;
     right: 0;
     text-align: left;
+
+    &-button {
+      position: relative;
+      margin-right: 15px;
+    }
+    &-mobile {
+      text-align: left;
+      position: absolute;
+      top: 108px;
+      left: 85%;
+      height: 100%;
+    }
 
     &__list {
       display: flex;

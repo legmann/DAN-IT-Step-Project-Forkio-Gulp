@@ -8,19 +8,6 @@
   animation: $animation $duration $method $times;
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .menu-button {
-    position: relative;
-    margin-right: 15px;
-  }
-  .menu-mobile {
-    text-align: left;
-    position: absolute;
-    top: 108px;
-    left: 0;
-    right: 0;
-  }
-}
 
 .menu-button__stick_small {
   position: absolute;
@@ -165,7 +152,6 @@
   animation-fill-mode: forwards;
 }
 
-
 .menu_open {
   @include keyframes(menu_open) {
     0% {
@@ -174,20 +160,12 @@
       transform: translateX(0);
       overflow: hidden;
     }
-    50% {
-      visibility: visible;
-      overflow: hidden;
-      display: block;
-      width: 150px;
-      height: 150px;
-    }
     100% {
       position: absolute;
       visibility: visible;
       transform: translateX(-320px);
-      left: 90%;
+      left: 93%;
       width: 292px;
-      height: 320px;
     }
   }
   @include animate(menu_open, .4s, linear, 1);
