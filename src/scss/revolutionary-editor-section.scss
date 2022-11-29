@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.revolution_editor {
+.revolution-editor {
   background: #FFFFFF;
   margin-top: 70px;
   width: 100%;
@@ -52,7 +52,7 @@
     flex-grow: 1;
   }
 
-  &__button_list {
+  &__button-list {
     list-style: none;
     display: flex;
     align-items: center;
@@ -63,7 +63,7 @@
     gap: 1vw;
   }
 
-  &__svg_wrapper {
+  &__svg-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,7 +72,7 @@
     background: linear-gradient(360deg, #dee1e1 20%, #f4f4f4 50%);
   }
 
-  &__wrapper_header {
+  &__wrapper-header {
     font-family: 'Montserrat', sans-serif;
     margin: 0 0 0 5px;
     font-weight: 700;
@@ -81,7 +81,7 @@
     line-height: 15px;
   }
 
-  &__count_wrapper {
+  &__count-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
