@@ -1,22 +1,20 @@
 .section-box {
+  @include padding-LR(10px, 10px);
   min-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
   text-align: center;
 }
 
 .reviews {
-  background: url('../dist/img/reviews-section/reviews-section-background.png');
-  background-repeat: no-repeat;
+  background-image: url('../dist/img/reviews-section/reviews-section-background.png');
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 
   &__container {
+    @include padding-LR(10px, 10px);
     padding-top: 108px;
-    padding-left: 10px;
-    padding-right: 10px;
     text-align: center;
   }
 
@@ -24,20 +22,20 @@
     padding-bottom: 86px;
     font-size: 48px;
     line-height: 50px;
-    color: #ffffff;
+    color: $accent-color;
   }
 
   &__list {
-    padding-top: 82px;
-    padding-bottom: 115px;
-    list-style: none;
-    padding: 0;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     column-gap: 90px;
     row-gap: 110px;
     place-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    padding-top: 82px;
+    padding-bottom: 115px;
+    padding: 0;
+    list-style: none;
 
     &_el {
       display: grid;
@@ -48,47 +46,40 @@
     }
 
     &_paragraph {
-      font-family: 'Lato', sans-serif;
-      color: #ffffff;
+      @include font($secondary-font, 700, 16px, 24px, none);
       font-style: italic;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 24px;
+      color: $accent-color;
     }
   }
 
   &__text_wrapper {
-    padding-top: 118px;
-    padding-bottom: 30px;
+    position: relative;
     max-width: 880px;
     margin: 0 auto;
-    position: relative;
+    padding-top: 118px;
+    padding-bottom: 30px;
   }
 
   &__text {
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
+    @include font($secondary-font, 400, 14px, 21px, none);
     color: #a291a5;
 
     &:after {
       content: ' ';
       position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: #645766;
       bottom: 11px;
       left: 50%;
+      width: 100%;
+      height: 2px;
       margin-right: -50%;
       transform: translate(-50%, -50%);
+      background-color: #645766;
     }
   }
 }
 
 .section-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $main-font;
   font-style: normal;
   font-weight: 700;
 }
@@ -102,10 +93,10 @@
     }
 
     &__list {
-      column-gap: 63px;
-      row-gap: 58px;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
+      column-gap: 63px;
+      row-gap: 58px;
     }
 
     &__title {
@@ -114,9 +105,8 @@
     }
 
     &__text_wrapper {
+      @include padding-LR(26px, 26px);
       padding-top: 68px;
-      padding-left: 26px;
-      padding-right: 26px;
     }
 
     &__text {
@@ -134,9 +124,9 @@
     }
 
     &__list {
-      row-gap: 45px;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(6, 1fr);
+      row-gap: 45px;
     }
 
     &__title {
@@ -150,9 +140,9 @@
     }
 
     &__text_wrapper {
+      max-width: 250px;
       padding-top: 18px;
       padding-bottom: 22px;
-      max-width: 250px;
     }
 
     &__text {

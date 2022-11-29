@@ -1,8 +1,7 @@
 .header-container {
+  @include padding-LR(10px, 10px);
   max-width: 1200px;
   margin: auto;
-  padding-left: 10px;
-  padding-right: 10px;
   text-align: center;
 }
 
@@ -27,7 +26,7 @@
     }
 
     &:hover > .header__logo-text {
-      color: #ffffff;
+      color: $accent-color;
     }
   }
 
@@ -38,100 +37,72 @@
   }
 
   &__logo-text {
+    @include font($main-font, 700, 24px, 16px, uppercase);
     padding-left: 17px;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 16px;
-    text-transform: uppercase;
-    color: #8d81ac;
+    color: $select-color;
   }
 
   &__top-menu-block {
+    @include padding-LR(80px, 80px);
     display: flex;
     align-items: center;
     padding-top: 30px;
-    padding-left: 80px;
-    padding-right: 80px;
   }
 
   &__title {
-    padding-top: 116px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 82px;
-    line-height: 82px;
+    @include font($main-font, 700, 82px, 82px, none);
     align-items: center;
+    padding-top: 116px;
     text-align: center;
-    color: #ffffff;
+    color: $accent-color;
   }
 
   &__subtitle {
+    @include font($secondary-font, 400, 30px, 30px, none);
+    @include padding-LR(10px, 10px);
     padding-top: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 30px;
     align-items: center;
     text-align: center;
-    color: #8d81ac;
+    color: $select-color;
   }
 
   &__text {
-    padding-top: 20px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
+    @include font($main-font, 400, 16px, 16px, uppercase);
     align-items: center;
+    padding-top: 20px;
     text-align: center;
-    text-transform: uppercase;
     color: #848e97;
   }
 
   &__download-button-block {
     position: absolute;
+    top: 764px;
     left: 0;
     right: 0;
-    top: 764px;
   }
 
   &__download-button {
-    padding: 23px 60px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 22px;
+    @include font($main-font, 700, 21px, 22px, none);
     align-items: center;
+    padding: 23px 60px;
     text-align: center;
-    background: #8d81ac;
-    border: 2px solid #8d81ac;
+    border: 2px solid $select-color;
     border-radius: 40px;
-    color: #ffffff;
+    background: $select-color;
+    color: $accent-color;
     cursor: pointer;
 
     &:hover {
-      color: #8d81ac;
-      background: #ffffff;
-      border: 2px solid #8d81ac;
+      border: 2px solid $select-color;
+      background: $accent-color;
+      color: $select-color;
     }
   }
 
   &__text-after-btn {
-    padding-top: 20px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 15px;
+    @include font($main-font, 400, 14px, 15px, none);
     align-items: center;
+    padding-top: 20px;
     text-align: center;
     color: #848e97;
   }
@@ -142,13 +113,10 @@
 }
 
 .menu {
+  @include padding-LR(15px, 48px);
   display: flex;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 48px;
   flex-shrink: 0;
-
-  gap: 0;
+  margin-left: auto;
 
   &__list {
     display: flex;
@@ -164,40 +132,32 @@
   }
 
   &__link {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 17px;
-    color: #8d81ac;
+    @include font($main-font, 700, 16px, 17px, none);
+    color: $select-color;
     text-decoration: none;
 
     &:hover {
-      color: #ffffff;
+      color: $accent-color;
     }
   }
 }
 
 .buy-button {
-  padding: 11px 0;
+  @include font($main-font, 700, 16px, 17px, none);
   min-width: 145px;
+  padding: 11px 0;
   text-align: center;
-  background: #8d81ac;
-  border: 1px solid #8d81ac;
+  border: 1px solid $select-color;
   border-radius: 40px;
+  background-color: $select-color;
+  color: $accent-color;
   cursor: pointer;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 17px;
-  color: #ffffff;
 
   &:hover {
-    background: #ffffff;
-    border: 1px solid #8d81ac;
+    border: 1px solid $select-color;
     border-radius: 40px;
-    color: #8d81ac;
+    background: $accent-color;
+    color: $select-color;
   }
 }
 
@@ -209,29 +169,25 @@
   cursor: pointer;
 
   & img {
-    background-color: #27262a;
+    width: 26px;
+    height: 26px;
     margin: 0;
     padding: 0;
     border: 0;
-    width: 26px;
-    height: 26px;
+    background-color: #27262a;
   }
 }
 
 @media screen and (min-width: 481px) and (max-width: 992px) {
   .header-container {
-    padding-left: 0;
-    padding-right: 0;
+    @include padding-LR(0, 0);
   }
 
   .header {
     &__top-menu-block {
       justify-content: space-between;
+      padding: 25px 20px 55px 20px;
       background-color: #27262a;
-      padding-top: 24px;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 55px;
     }
 
     &__title {
@@ -252,15 +208,14 @@
   }
 
   .menu {
-    position: absolute;
+    @include padding-LR(10px, 10px);
     display: flex;
-    margin: 0;
+    justify-content: center;
+    position: absolute;
+    top: 85px;
     left: 0;
     right: 0;
-    top: 85px;
-    justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin: 0;
 
     &__list {
       justify-content: center;
@@ -285,8 +240,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .header-container {
-    padding-left: 0;
-    padding-right: 0;
+    @include padding-LR(0, 0);
   }
 
   .header {
@@ -296,12 +250,9 @@
       display: none;
     }
     &__top-menu-block {
-      background-color: #27262a;
       justify-content: space-between;
-      padding-top: 34px;
-      padding-left: 16px;
-      padding-right: 16px;
-      padding-bottom: 32px;
+      padding: 34px 16px 32px 16px;
+      background-color: #27262a;
     }
 
     &__title {
@@ -311,12 +262,13 @@
     }
 
     &__subtitle {
-      padding-left: 25px;
-      padding-right: 25px;
-      font-family: 'Montserrat';
-      font-size: 18px;
-      line-height: 24px;
-      text-transform: capitalize;
+      @include font($main-font, 400, 18px, 24px, capitalize);
+      @include padding-LR(25px, 25px);
+    }
+
+    .header__text {
+      font-size: 14px;
+      line-height: 14px;
     }
 
     &__download-button-block {
@@ -337,76 +289,71 @@
   }
 
   .menu {
+    @include padding-LR(20px, 20px);
     display: none;
-    text-align: left;
     position: absolute;
+    top: 108px;
     left: 0;
     right: 0;
-    top: 108px;
-    padding-left: 20px;
-    padding-right: 20px;
+    text-align: left;
 
     &__list {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      background-color: #333333;
       overflow: hidden;
+      background-color: #333333;
     }
 
     &__item,
     &__item:last-child {
-      border-bottom: 2px solid #3b3b3b;
       width: 100%;
+      padding-right: 0;
       overflow: hidden;
       box-sizing: border-box;
-      padding-right: 0;
+      border-bottom: 2px solid #3b3b3b;
     }
 
     &__link {
-      position: relative;
-      box-sizing: border-box;
+      @include font($main-font, 400, 26px, 26px, none);
       display: inline-block;
+      position: relative;
       width: 100%;
-      padding-left: 34px;
       padding-top: 30px;
       padding-bottom: 20px;
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 26px;
-      line-height: 26px;
-      color: #ffffff;
+      padding-left: 34px;
+      box-sizing: border-box;
+      color: $accent-color;
 
       &:active {
-        color: #8d81ac;
+        color: $select-color;
         outline: 0;
         outline-offset: 0;
 
         &::before {
           content: '';
           position: absolute;
-          left: 0px;
           top: 12px;
+          left: 0px;
           width: 8px;
           height: 53px;
-          background-color: #8d81ac;
+          background-color: $select-color;
         }
       }
 
       &:focus {
-        color: #8d81ac;
+        color: $select-color;
         outline: 0;
         outline-offset: 0;
 
         &::before {
           content: '';
           position: absolute;
-          left: 0px;
           top: 12px;
+          left: 0px;
           width: 8px;
           height: 53px;
-          background-color: #8d81ac;
+          background-color: $select-color;
         }
       }
     }
