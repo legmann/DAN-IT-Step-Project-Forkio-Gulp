@@ -275,6 +275,14 @@
   }
 }
 
+@media screen and (max-width: 536px) {
+  .menu {
+    &__item {
+      padding-right: 29px;
+    }
+  }
+}
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .header-container {
     padding-left: 0;
