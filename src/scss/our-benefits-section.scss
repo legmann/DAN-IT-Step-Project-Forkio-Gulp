@@ -82,7 +82,7 @@
 
 
 @media screen and (min-width: 481px) and (max-width: 992px) {
-  .our_benefits {
+  .our-benefits {
     background: #FFFFFF;
 
     &__list {
@@ -91,14 +91,14 @@
       padding-right: 10px;
       padding-left: 10px;
 
-      &_el {
+      &-el {
         display: grid;
         grid-template-columns: 1fr 4fr;
         align-items: center;
         place-items: center;
       }
 
-      &_header {
+      &-header {
         line-height: 16px;
       }
     }
@@ -132,7 +132,7 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .our_benefits {
+  .our-benefits {
     background: #FFFFFF;
 
     &__list {
@@ -141,7 +141,7 @@
       padding-right: 10px;
       padding-left: 10px;
 
-      &_el {
+      &-el {
         display: grid;
         grid-template-columns: 1fr 4fr;
         align-items: center;
@@ -182,7 +182,7 @@
       text-align: center;
       row-gap: 10px;
 
-      &_el {
+      &-el {
         row-gap: 10px;
         display: grid;
         grid-template-columns: 1fr;

@@ -14,7 +14,6 @@ button.addEventListener('click', (e) => {
 });
 
 // Resized window function
-
 function resized() {
   let myWidth = 0,
     myHeight = 0,
