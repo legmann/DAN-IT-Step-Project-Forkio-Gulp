@@ -1,9 +1,158 @@
-@mixin keyframes($name){
+@mixin keyframes($name) {
   @keyframes #{$name}{
     @content;
   }
 }
 
-@mixin animate($animation,$duration,$method,$times){
+@mixin animate($animation, $duration, $method, $times) {
   animation: $animation $duration $method $times;
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .menu-button {
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    //align-items: end;
+    position: relative;
+
+    margin-right: 15px;
+  }
+}
+
+.menu-button__stick_small {
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 15px;
+  border-radius: 5px;
+  top: 3px;
+  left: auto;
+}
+.menu-button__stick_big_2{
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 26px;
+  border-radius: 5px;
+  left: -10px;
+  top: auto;
+}
+.menu-button__stick {
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 26px;
+  border-radius: 5px;
+  top: 23px;
+  left: -10px;
+}
+
+.animation1 {
+  @include keyframes(animation1) {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @include animate(animation1, 0s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+
+.animation2 {
+  @include keyframes(animation2) {
+    50% {
+      top: 50%;
+    }
+    75% {
+      top: 50%;
+      transform: rotate(0);
+    }
+    100% {
+      top: 50%;
+      transform: rotate(47deg);
+    }
+  }
+  @include animate(animation2, .4s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.animation3 {
+  @include keyframes(animation3) {
+    50% {
+      top: 50%;
+    }
+    75% {
+      top: 50%;
+      transform: rotate(0);
+    }
+    100% {
+      top: 50%;
+      transform: rotate(-47deg);
+    }
+  }
+  @include animate(animation3, .4s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.animation1_reverse {
+  @include keyframes(animation1) {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @include animate(animation1, 0s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+
+.animation2 {
+  @include keyframes(animation2) {
+    50% {
+      top: 50%;
+      transform: rotate(47deg);
+    }
+    75% {
+      top: 50%;
+      transform: rotate(0);
+    }
+    100% {
+      top: 50%;
+    }
+  }
+  @include animate(animation2, .4s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+.animation3 {
+  @include keyframes(animation3) {
+    50% {
+      top: 50%;
+      transform: rotate(-47deg);
+
+    }
+    75% {
+      top: 50%;
+      transform: rotate(0);
+    }
+    100% {
+      top: 50%;
+    }
+  }
+  @include animate(animation3, .4s, linear, 1);
+  animation-fill-mode: forwards;
+}
+
+
