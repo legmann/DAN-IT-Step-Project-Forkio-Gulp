@@ -1,4 +1,4 @@
-.our_benefits {
+.our-benefits {
   background: #f4f4f4;
 
   &__container {
@@ -15,7 +15,7 @@
       '. . . . c c c c';
   }
 
-  &__code_img {
+  &__code-img {
     width: 100%;
     max-width: 700px;
     height: auto;
@@ -40,14 +40,14 @@
     padding: 0;
     text-align: start;
 
-    &_el {
+    &-el {
       display: grid;
       grid-template-columns: 1fr 2fr;
       align-items: center;
       place-items: center;
     }
 
-    &_header {
+    &-header {
       font-family: 'Montserrat', sans-serif;
       color: #323232;
       font-style: normal;
@@ -57,7 +57,7 @@
       margin-bottom: 17px;
     }
 
-    &_paragraph {
+    &-paragraph {
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
@@ -68,15 +68,15 @@
   }
 }
 
-.item_1 {
+.grid-item-1 {
   grid-area: a;
 }
 
-.item_2 {
+.grid-item-2 {
   grid-area: b;
 }
 
-.item_3 {
+.grid-item-3 {
   grid-area: c;
 }
 
@@ -97,6 +97,7 @@
         align-items: center;
         place-items: center;
       }
+
       &_header {
         line-height: 16px;
       }
