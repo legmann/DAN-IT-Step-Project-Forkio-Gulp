@@ -9,7 +9,7 @@
 .header {
   margin: auto;
   height: 800px;
-  background-image: url('/dist/img/header/header-bg.png');
+  background-image: url('../dist/img/header/header-bg.png');
   background-color: #010005;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,7 +23,7 @@
     align-items: center;
 
     &:hover > .header__logo-icon {
-      background-image: url(/dist/img/header/logo-img-hover.png);
+      background-image: url('../dist/img/header/logo-img-hover.png');
     }
 
     &:hover > .header__logo-text {
@@ -32,7 +32,7 @@
   }
 
   &__logo-icon {
-    background-image: url(/dist/img/header/logo-img.png);
+    background-image: url('../dist/img/header/logo-img.png');
     width: 43px;
     height: 42px;
   }
