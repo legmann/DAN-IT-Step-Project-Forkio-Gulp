@@ -108,13 +108,6 @@
   }
 }
 
-.menu-mobile {
-  overflow: hidden;
-  width: 0;
-  height: 0;
-  transform: translateX(0);
-}
-
 .menu {
   @include padding-LR(15px, 48px);
   display: flex;
@@ -182,6 +175,12 @@
     padding: 0;
     border: 0;
     background-color: #27262a;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .menu-mobile {
+    display: none;
   }
 }
 
@@ -253,9 +252,14 @@
   .menu-mobile {
     text-align: left;
     position: absolute;
-    top: 108px;
-    right: 0;
-    left: 90%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    width: 290px;
+    height: 100%;
+    transition-duration: 1s;
   }
 
   .header-container {
@@ -268,6 +272,7 @@
     &__logo-text {
       display: none;
     }
+
     &__top-menu-block {
       justify-content: space-between;
       padding: 34px 16px 32px 16px;
@@ -320,11 +325,13 @@
       position: relative;
       margin-right: 15px;
     }
+
     &-mobile {
+      top: 108px;
+      transform: translateX(-50%);
       text-align: left;
       position: absolute;
-      top: 108px;
-      left: 85%;
+      left: 50%;
       height: 100%;
     }
 

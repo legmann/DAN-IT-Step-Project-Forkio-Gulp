@@ -4,28 +4,21 @@
   background-image: url("../dist/img/price-section/price-section-background.png");
 
   &__header {
-    font-family: 'Montserrat', sans-serif;
-    padding-top: 85px;
-    padding-bottom: 60px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 50px;
-    color: #FFFFFF;
+    @include font($main-font, 700, 48px, 50px, normal);
+    padding: 85px 0 60px 0;
+    color: $accent-color;
   }
 
   &__list {
     padding-bottom: 100px;
     gap: 10px;
-    display: grid;
+    @include grid(grid, center, center);
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    text-align: center;
-    place-items: center;
 
 
     &-el {
-      background-color: rgba(255, 255, 255, 0.11);
+      background-color: $priceListBackground;
       max-width: 260px;
       width: 260px;
       height: 515px;
@@ -40,27 +33,18 @@
 
   &__name {
     height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.1);
+    @include flex(flex, center, center);
+    background-color: $priceListBackgroundOpacity;
 
     &_state_active {
       height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex(flex, center, center);
       background-color: rgba(0, 0, 0, 0.11);
     }
 
     &-text {
-      font-family: 'Montserrat', sans-serif;
-      color: #FFFFFF;
-      text-transform: uppercase;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 24px;
+      @include font($main-font, 400, 24px, 24px, uppercase);
+      color: $accent-color;
       text-align: center;
     }
   }
@@ -74,7 +58,7 @@
       position: absolute;
       max-width: 60px;
       height: 5px;
-      background: #8D81AC;
+      background: $select-color;
       width: 100%;
       left: 50%;
       bottom: -40%;
@@ -91,13 +75,8 @@
   }
 
   &__costs {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 90px;
-    text-transform: uppercase;
-    color: #FFFFFF;
+    @include font($main-font, 700, 60px, 90px, uppercase);
+    color: $accent-color;
     padding-bottom: 10px;
 
     &_state_active {
@@ -112,13 +91,8 @@
     }
 
     &-text {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 16px;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      font-family: 'Montserrat', sans-serif;
+      color: $accent-color;
+      @include font($main-font, 400, 14px, 16px, uppercase);
     }
   }
 
@@ -135,12 +109,8 @@
   }
 
   &__link-text {
-    color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
+    color: $accent-color;
+    @include font($main-font, 400, 16px, 18px, normal);
     margin-bottom: 45px;
   }
 
@@ -148,17 +118,12 @@
     margin: 0 auto;
     max-width: 100px;
     display: block;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 15px;
-    color: #FFFFFF;
+    @include font($main-font, 400, 15px, 15px, uppercase);
+    color: $accent-color;
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.11);
+    background: $priceListBackground;
     padding: 15px 38px;
     border-radius: 40px;
-    text-transform: uppercase;
   }
 }
 
