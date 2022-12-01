@@ -78,34 +78,6 @@ function scripts() {
         .pipe(browsersync.stream())
 }
 
-function scriptsDev() {
-    return gulp
-        .src(`${path.src.js}/*.js`)
-        .pipe(
-            plumber({
-                errorHandler: notify.onError((error) => ({
-                    title: "Scripts",
-                    message: error.message,
-                })),
-            })
-        )
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
-        .pipe(concat('scripts.js'))
-        .pipe(rename({
-            basename: "scripts",
-            suffix: ".min",
-        }))
-        .pipe(jsmin())
-        .pipe(size({
-            showFiles: true
-        }))
-        .pipe(gulp.dest(path.dist.js))
-        .pipe(browsersync.stream())
-}
-
-
 function styles() {
     return gulp
         .src(`${path.src.scss}/style.scss`)
@@ -136,38 +108,6 @@ function styles() {
         }))
         .pipe(gulp.dest(path.dist.css))
 }
-
-function stylesDev() {
-    return gulp
-        .src(`${path.src.scss}/**/*.scss`)
-        .pipe(
-            plumber({
-                errorHandler: notify.onError((error) => ({
-                    title: "Styles",
-                    message: error.message,
-                })),
-            })
-        )
-        .pipe(sass().on('error', sass.logError))
-        .pipe(cleanCSS({
-            level: 2
-        }))
-        .pipe(concat('styles.css'))
-        .pipe(rename({
-            basename: "styles",
-            suffix: ".min",
-        }))
-        .pipe(autoprefixer({
-            cascade: false
-        }))
-        .pipe(cssmin())
-        .pipe(size({
-            showFiles: true
-        }))
-        .pipe(gulp.dest(path.dist.css))
-}
-
-
 function images() {
     return gulp
         .src(`${path.src.img}/**/*.{png,jpg,jpeg,gif,svg}`)
