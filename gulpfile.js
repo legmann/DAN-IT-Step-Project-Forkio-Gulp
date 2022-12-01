@@ -78,6 +78,7 @@ function scripts() {
         .pipe(browsersync.stream())
 }
 
+
 function styles() {
     return gulp
         .src(`${path.src.scss}/style.scss`)
@@ -124,9 +125,38 @@ function images() {
 
 
 function clean() {
-    return del(['dist/*', '!dist/img']);
+    return del(['dist']);
+
 }
 
+function scriptsDev() {
+    return gulp
+        .src(`${path.src.js}/*.js`)
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(concat('scripts.min.js'))
+        .pipe(jsmin())
+        .pipe(gulp.dest(path.dist.js))
+}
+
+function stylesDev() {
+    return gulp
+        .src(`${path.src.scss}/style.scss`)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCSS({
+            level: 2
+        }))
+        .pipe(rename({
+            basename: "styles",
+            suffix: ".min",
+        }))
+        .pipe(autoprefixer({
+            cascade: false
+        }))
+        .pipe(cssmin())
+        .pipe(gulp.dest(path.dist.css))
+}
 
 function watch() {
     browsersync.init({
@@ -141,8 +171,8 @@ function watch() {
     gulp.watch(path.src.img, images).on('change', browsersync.reload)
 }
 
-const build = series(clean, html, styles, scripts, images);
-const dev = series(build, watch);
+const build = series(clean, html, styles, scripts, images, watch);
+const dev = series(stylesDev, scriptsDev, watch);
 
 exports.build = build
 exports.dev = dev
