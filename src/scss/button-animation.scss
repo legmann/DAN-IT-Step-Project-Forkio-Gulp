@@ -31,7 +31,6 @@
   animation-fill-mode: forwards;
 }
 
-
 .animation1 {
   @include keyframes(animation1) {
     0% {
@@ -48,7 +47,6 @@
   animation-fill-mode: forwards;
 }
 
-
 .animation2 {
   @include keyframes(animation2) {
     50% {
@@ -63,7 +61,7 @@
       transform: rotate(47deg);
     }
   }
-  @include animate(animation2, .4s, linear, 1);
+  @include animate(animation2, 0.4s, linear, 1);
   animation-fill-mode: forwards;
 }
 
@@ -81,7 +79,7 @@
       transform: rotate(-47deg);
     }
   }
-  @include animate(animation3, .4s, linear, 1);
+  @include animate(animation3, 0.4s, linear, 1);
   animation-fill-mode: forwards;
 }
 
@@ -97,10 +95,9 @@
       opacity: 1;
     }
   }
-  @include animate(animation1_reverse, .5s, linear, 1);
+  @include animate(animation1_reverse, 0.5s, linear, 1);
   animation-fill-mode: forwards;
 }
-
 
 .animation2_reverse {
   @include keyframes(animation2_reverse) {
@@ -116,7 +113,7 @@
       top: auto;
     }
   }
-  @include animate(animation2_reverse, .4s, linear, 1);
+  @include animate(animation2_reverse, 0.4s, linear, 1);
   animation-fill-mode: forwards;
 }
 
@@ -137,16 +134,13 @@
       top: 23px;
     }
   }
-  @include animate(animation3_reverse, .4s, linear, 1);
+  @include animate(animation3_reverse, 0.4s, linear, 1);
   animation-fill-mode: forwards;
 }
 
 .menu_open {
+  height: 312px;
   transition-duration: 1s;
   visibility: visible;
   opacity: 1;
 }
-
-
-
-
